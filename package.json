@@ -14,7 +14,7 @@
     "url": "git+https://github.com/lumapps/ts-backend-tech-test.git"
   },
   "engines": {
-    "node": ">=22"
+    "node": ">=24"
   },
   "scripts": {
     "start": "NODE_OPTIONS='-r ts-node/register' node ./goban.ts",
@@ -22,8 +22,8 @@
     "test-only":  "NODE_OPTIONS='-r ts-node/register' node --test --test-only ./*.spec.ts"
   },
   "devDependencies": {
-    "@types/node": "22.7.5",
+    "@types/node": "24.1.0",
     "ts-node": "10.9.2",
-    "typescript": "5.6.3"
+    "typescript": "5.9.3"
   }
 }
