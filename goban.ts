@@ -18,11 +18,10 @@ export class Goban {
 
   public getStatus(x: number, y: number): Status {
     if (
-      !this.board ||
       x < 0 ||
       y < 0 ||
       y >= this.board.length ||
-      x >= this.board[0].length
+      x >= this.board[y].length
     ) {
       return Status.OUT;
     } else if (this.board[y][x] === ".") {
@@ -32,7 +31,7 @@ export class Goban {
     } else if (this.board[y][x] === "#") {
       return Status.BLACK;
     }
-    throw new Error(`Unknown goban value ${this.board[y][x]}`);
+    throw new Error(`Unknown goban value at position (${x}, ${y})`);
   }
 
   public isTaken(x: number, y: number): boolean {
